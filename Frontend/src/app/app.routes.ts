@@ -11,15 +11,15 @@ export const routes: Routes = [
         loadComponent: () => import('./shared/components/login-form/login-form.component'),
       },
       {
+        path: 'register',
+        loadComponent: () => import('./shared/components/register-form/register-form.component'),
+      },
+      {
         path: '**',
         redirectTo: 'login',
       },
     ],
   },
-  // {
-  //   path: 'register',
-  //   component: RegisterFormComponent,
-  // },
   {
     path: '',
     redirectTo: 'auth',

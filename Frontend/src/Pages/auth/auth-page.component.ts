@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import LoginFormComponent from '../../app/shared/components/login-form/login-form.component';
-
+import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'auth-page',
-  imports: [LoginFormComponent],
+  imports: [RouterOutlet],
   templateUrl: './auth-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

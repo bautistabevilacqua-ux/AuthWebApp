@@ -1,0 +1,46 @@
+<div class="register-container mx-auto">
+  <h2 class="text-center mb-4">Sign Up</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <!-- Email Input -->
+
+    <form-input
+      [form]="registerForm"
+      name="email"
+      label="Email"
+      placeholder="Enter your email"
+      type="email"
+    />
+
+    <!-- Password Input -->
+    <form-input
+      [form]="registerForm"
+      name="password"
+      label="Password"
+      placeholder="Choose a password"
+      type="password"
+    />
+
+    <form-input
+      [form]="registerForm"
+      name="confirm"
+      label="Confirm Password"
+      placeholder="Confirm your password"
+      type="password"
+    />
+    @if (registerForm.hasError('passwordsNotMatching') && registerForm.get('confirm')?.touched) {
+    <small class="text-danger">Deben coincidir las contraseñas.</small>
+    }
+
+    <!-- Sign Up Button -->
+    <div class="d-grid mb-3">
+      <button type="submit" class="btn btn-danger">Sign Up</button>
+    </div>
+  </form>
+
+  <!-- Sign Up Link -->
+  <p class="text-center signup-text mb-0">
+    Already have an account?
+    <a [routerLink]="['/auth/login']" class="signup-link">Sign in</a>
+  </p>
+</div>
