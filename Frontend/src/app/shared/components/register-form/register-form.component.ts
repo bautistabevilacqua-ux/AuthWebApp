@@ -1,15 +1,9 @@
-import { Component, inject } from '@angular/core';
-import {
-  ReactiveFormsModule,
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder,
-  AbstractControl,
-  ValidationErrors,
-} from '@angular/forms';
+import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { FormInputComponent } from '../form-input/form-input.component';
+import { passwordMatchValidator } from '../../utilities/validators/password-match.validator';
+import { passwordStrengthValidator } from '../../utilities/validators/password-strenght.validator';
 
 @Component({
   selector: 'register-form',
@@ -31,29 +25,4 @@ export default class RegisterFormComponent {
     console.log('VALORES:', this.registerForm.value);
     console.log('VALIDO:', this.registerForm.valid);
   }
-}
-
-function passwordStrengthValidator(control: AbstractControl): ValidationErrors | null {
-  const value = control.value;
-
-  if (!value) return null;
-
-  const hasUpperCase = /[A-Z]/.test(value);
-  const hasNumber = /[0-9]/.test(value);
-  const hasMinLength = value.length >= 8;
-
-  const valid = hasUpperCase && hasNumber && hasMinLength;
-
-  return valid ? null : { weakPassword: true };
-}
-
-function passwordMatchValidator(group: AbstractControl): ValidationErrors | null {
-  const password = group.get('password')?.value;
-  const confirm = group.get('confirm')?.value;
-
-  if (password !== confirm) {
-    return { passwordsNotMatching: true };
-  }
-
-  return null;
 }
