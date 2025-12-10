@@ -1,0 +1,9 @@
+<div class="mb-3" [formGroup]="form">
+  <label class="form-label text-white">{{ label }}</label>
+
+  <input [type]="type" class="form-control" [placeholder]="placeholder" [formControlName]="name" />
+
+  @if (form.get(name)?.invalid && form.get(name)?.touched) {
+  <small class="text-white">{{ getErrorMessage() }}</small>
+  }
+</div>

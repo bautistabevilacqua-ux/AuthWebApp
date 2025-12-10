@@ -1,0 +1,31 @@
+.login-container {
+  min-width: 50%;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h2 {
+  color: rgb(255, 255, 255);
+}
+
+.login-container label {
+  color: white;
+}
+
+.login-container .signup-text {
+  color: white;
+}
+
+.login-container .signup-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.forgot-link {
+  color: #ffffff;
+  text-decoration: underline;
+}

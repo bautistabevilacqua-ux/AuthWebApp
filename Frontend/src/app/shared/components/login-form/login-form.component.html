@@ -1,0 +1,38 @@
+<div class="login-container mx-auto">
+  <h2 class="text-center mb-4">Sign In</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- Email Input -->
+
+    <form-input
+      [form]="form"
+      name="email"
+      label="Email"
+      placeholder="Enter your email"
+      type="email"
+    />
+
+    <!-- Password Input -->
+    <form-input
+      [form]="form"
+      name="password"
+      label="Password"
+      placeholder="Enter your password"
+      type="password"
+    />
+    <!-- Forgot Password Link -->
+    <div class="mb-3 text-end">
+      <a href="#forgot-password" class="forgot-link">Forgot your password?</a>
+    </div>
+    <!-- Sign In Button -->
+    <div class="d-grid mb-3">
+      <button type="submit" class="btn btn-danger">Sign In</button>
+    </div>
+  </form>
+
+  <!-- Sign Up Link -->
+  <p class="text-center signup-text mb-0">
+    Don't have an account?
+    <a [routerLink]="['/register']" class="signup-link">Sign up</a>
+  </p>
+</div>
