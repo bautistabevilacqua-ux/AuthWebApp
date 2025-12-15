@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": 1765478651717,
+      "name": "Bauti",
+      "email": "bauti@test.com",
+      "password": "$2b$10$/NKES6.yqvZ/dejgAvMdDO2W7Ant595ErWJlmhx84hQxAbxMY2ALi"
+    },
+    {
+      "id": 1765478893371,
+      "name": "Bauti",
+      "email": "bauti@gmail.com",
+      "password": "$2b$10$EaCmU8wUDFYBrNKvFPJGFekViyeisVJpe5VBjnxpH5LZWQVo2PyzO"
+    },
+    {
+      "id": 1765523048371,
+      "email": "test@gmail.com",
+      "password": "$2b$10$HIC1dvX0Xh8bNeXLgU6m6.T8.DjNPeh6U2.9ThBsiOapMbwl0Djm."
+    },
+    {
+      "id": 1765523422867,
+      "email": "test2@gmail.com",
+      "password": "$2b$10$V9EOQfCYl32oLNTW/DS55eJADdBAZXu7WiwmjFna9vZTBMMjWGHsy"
+    },
+    {
+      "id": 1765525349967,
+      "email": "test3@gmail.com",
+      "password": "$2b$10$KXB1XQaJ.VjM09mJ50.E8Owr81ojTvveD.1xafpJvU8AB9aIPccbm"
+    },
+    {
+      "id": 1765525822420,
+      "email": "bau@gmail.com",
+      "password": "$2b$10$aQiaabCGGSu9WUh2pVa2AOAiNdSmlqj/tez9ZIFBpUur0I8aMsE2e"
+    },
+    {
+      "id": 1765732077937,
+      "email": "test3@hotmail.com",
+      "password": "$2b$10$9179gUnZ5VbeL7XBYZbpH.snt8H973Vtwr.L1NVKGfsIKBa2mDrzi"
+    },
+    {
+      "id": 1765733987804,
+      "email": "testjson@hotmail.com",
+      "password": "$2b$10$4j0iJXW3TyUXdD.CHsmt4ugJ0Oojt0deYMzU6xd9C2s.xjrKFB.Ue"
+    },
+    {
+      "id": 1765734098124,
+      "email": "testmysql@hotmail.com",
+      "password": "$2b$10$oyMWAcgLN3N9t38vwGZOX.maiF1zNKdTK9GOsQ5j41WqoKSXC/cTq"
+    }
+  ],
+  "metrics": {
+    "1765478651717": {
+      "lastLogin": "2025-12-14T17:12:45.840Z",
+      "totalLogins": 26
+    },
+    "1765478893371": {
+      "lastLogin": null,
+      "totalLogins": 0
+    },
+    "1765523048371": {
+      "lastLogin": null,
+      "totalLogins": 0
+    },
+    "1765523422867": {
+      "lastLogin": null,
+      "totalLogins": 0
+    },
+    "1765525349967": {
+      "lastLogin": null,
+      "totalLogins": 0
+    },
+    "1765525822420": {
+      "lastLogin": "2025-12-12T07:51:15.056Z",
+      "totalLogins": 1
+    },
+    "1765732077937": {
+      "lastLogin": null,
+      "totalLogins": 0
+    },
+    "1765733987804": {
+      "lastLogin": null,
+      "totalLogins": 0
+    },
+    "1765734098124": {
+      "lastLogin": null,
+      "totalLogins": 0
+    }
+  }
+}

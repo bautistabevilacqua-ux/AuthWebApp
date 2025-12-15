@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid px-5 py-2">
+    <a class="navbar-brand" href="#">Academy</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+      </ul>
+      <div class="ms-auto">
+        @if(authService.authStatus() === 'authenticated'){
+        <button class="btn btn-ghost">{{ authService.user()?.email }}</button>
+        <button
+          class="btn btn-sm btn-danger"
+          (click)="authService.logout()"
+          [routerLink]="['/login']"
+        >
+          Salir
+        </button>
+        } @else if (authService.authStatus() === 'not-authenticated') {
+        <a routerLink="/login" class="btn btn-primary">Login</a>
+        } @else {
+        <a class="btn btn-ghost">...</a>
+        }
+      </div>
+    </div>
+  </div>
+</nav>

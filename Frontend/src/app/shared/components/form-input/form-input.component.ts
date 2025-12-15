@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -6,6 +6,7 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './form-input.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormInputComponent {
   @Input() form!: FormGroup;
@@ -20,7 +21,7 @@ export class FormInputComponent {
     if (!control || !control.errors) return '';
 
     if (control.errors['required']) return 'This field is required.';
-    if (control.errors['email']) return 'Enter a valid email.';
+    if (control.errors['invalidEmail']) return 'Enter a valid email.';
     if (control.errors['weakPassword'])
       return 'La contraseña debe contener al menos 8 caracteres, una mayúscula y un número.';
 

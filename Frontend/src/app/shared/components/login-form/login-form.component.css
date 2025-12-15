@@ -1,5 +1,6 @@
 .login-container {
-  min-width: 50%;
+  width: 100%;
+  max-width: 500px;
   padding: 2.5rem;
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
@@ -28,4 +29,9 @@
 .forgot-link {
   color: #ffffff;
   text-decoration: underline;
+}
+:host {
+  width: 100%;
+  margin-inline: 20px;
+  display: block;
 }
