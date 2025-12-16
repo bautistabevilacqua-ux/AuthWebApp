@@ -27,14 +27,6 @@ export class JsonUserRepository implements UserRepository {
   async create(user: User): Promise<void> {
     const db = loadDB();
     db.users.push(user);
-    db.metrics[user.id] = { lastLogin: null, totalLogins: 0 };
-    saveDB(db);
-  }
-
-  async updateMetrics(userId: number): Promise<void> {
-    const db = loadDB();
-    db.metrics[userId].lastLogin = new Date().toISOString();
-    db.metrics[userId].totalLogins++;
     saveDB(db);
   }
 }

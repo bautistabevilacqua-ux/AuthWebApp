@@ -25,17 +25,4 @@ export class MysqlUserRepository implements UserRepository {
       [user.id, user.email, user.password]
     );
   }
-
-  async updateMetrics(userId: number): Promise<void> {
-    await pool.query(
-      `
-      INSERT INTO user_metrics (user_id, last_login, total_logins)
-      VALUES (?, NOW(), 1)
-      ON DUPLICATE KEY UPDATE
-      last_login = NOW(),
-      total_logins = total_logins + 1
-      `,
-      [userId]
-    );
-  }
 }

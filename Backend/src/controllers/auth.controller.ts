@@ -65,8 +65,6 @@ export const AuthController = {
         });
       }
 
-      await UserService.updateMetrics(user.id);
-
       const token = generateToken({
         id: user.id,
         email: user.email,
